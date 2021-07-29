@@ -309,6 +309,12 @@ ul li {
 
 @font-face {
   font-family: "Anivers_Regular";
+  src: url("https://tikvik.github.io/ostruzina/FONTS/Anivers_Regular.otf");
+  unicode-range: U+0000-07FF;
+  font-display: block;
+}
+@font-face {
+  font-family: "Anivers_Regular";
   src: url("fonts/Anivers_Regular.otf");
   unicode-range: U+0000-07FF;
   font-display: block;
