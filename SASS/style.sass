@@ -1,0 +1,140 @@
+
+$gap: 3rem
+$bcolor: #240E39
+$bgcolor: #F9F8E7
+$border-radius: 20px
+
+@keyframes example
+	0%
+		font-style: normal
+	100%
+		font-style: italic
+@import mixins.scss
+@import loadfont
+@import globals2
+@import selectbox
+
+
+@include font('Anivers_Regular', 'fonts/', '.otf')
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap')
+
+
+
+*
+	box-sizing: border-box
+
+html 
+	height: 100%
+	margin: 0
+	padding: 0
+	overflow: hidden
+body
+	min-height: 100%
+	margin: 0
+	padding: 0
+	font-family: "Roboto", sans-serif
+	font-size: 2vw
+	font-weight: 800
+	color: #240E39
+	background-color: $bgcolor
+	// @include for-size(sm)
+	// 	font-size: 16px
+	// @include for-size(xl)
+	// 	font-size: 28px
+	font-family: Anivers_Regular
+
+
+.wrap
+	display: grid
+	grid-template-columns: $gap 250px auto 250px $gap
+	grid-template-rows: $gap/2 150px 1fr 50px
+	grid-template-areas: ". . info . ." ". topleft topcenter topright ." ". leftsidebar content . ." ". bottomleft bottomcenter bottomright ."
+	grid-gap: 0px
+	height: 100vh
+
+
+	.logo
+		grid-area: topleft	
+		position: relative
+		img
+			width: 100%
+			height: auto
+	.info
+		grid-area: topcenter
+		text-align: center
+		position: relative
+		font-size: 28px
+		text-transform: uppercase
+	.filtr
+		grid-area: topright
+		justify-self: start
+		z-index: 1
+	.cancelfilter
+		grid-area: bottomleft
+
+
+	.lang
+		grid-area: bottomright
+		text-align: right
+
+	.content
+		grid-column: 1/6
+		grid-row: 1/6
+		overflow: auto
+		text-align: center
+
+
+		h1
+			font-size: 15vw
+
+			line-height: .9
+			margin: 0
+			text-transform: uppercase
+
+			&:nth-child(1)
+				padding-top: $gap*4
+				cursor: url(images/logo.svg), auto
+			&:nth-child(2)
+				cursor: url(images/logo.svg), auto
+			&:nth-child(3)
+				cursor: url(images/logo.svg), auto
+		// background-color: blue
+
+	.pageheader
+		grid-column: 3/5
+		grid-row: 2/3
+		text-align: right
+
+
+
+	.pagecontent
+		grid-column: 3/5
+		grid-row: 2/5
+		overflow: auto
+		.innercontent
+			width: 90%
+			border-left: 2px solid $bcolor
+			margin-left: auto
+			padding-left: $gap
+			padding-right: $gap
+			padding-bottom: $gap
+			a
+				// font-style: italic
+				text-decoration: underline
+
+
+
+	.pageleftsidebar
+		grid-area: leftsidebar
+		position: relative
+		align-self: end
+
+.trow
+	font-size: 20px !important
+
+
+// .pagemenu
+// 	position: absolute
+
+

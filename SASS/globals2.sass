@@ -1,0 +1,241 @@
+// MOdal*************
+
+.modal 
+	display: block 
+	width: 1200px 
+	max-width: 80% 
+	height: 800px 
+	max-height: 100% 
+	position: fixed 
+	z-index: 100 
+	left: 50% 
+	top: 50% 
+	transform: translate(-50%, -50%) 
+	background: white 
+	// box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9) 
+	.close-button 
+		position: absolute 
+		z-index: 1 
+		top: 10px 
+		right: 20px 
+		border: 0 
+		border-radius: $border-radius
+		background: white 
+		// color: white 
+		padding: 5px 10px 
+		font-size: 1.3rem
+		cursor: pointer
+.closed 
+	display: none
+
+.modal-overlay 
+	position: fixed 
+	top: 0 
+	left: 0 
+	width: 100% 
+	height: 100% 
+	z-index: 50 
+	background: rgba(0, 0, 0, 0.6) 
+.modal-guts 
+	position: absolute 
+	top: 0 
+	left: 0 
+	width: 100% 
+	height: 100% 
+	overflow: auto 
+	padding: $gap
+* 
+	box-sizing: border-box 
+	margin: 0 
+	padding: 0 
+
+ul 
+	margin: 10px 0 10px 30px 
+li, p 
+	margin: 0 0 10px 0 
+h1 
+	margin: 0 0 20px 0 
+
+.open-button 
+	border: 0 
+	background: $bcolor 
+	color: white 
+	padding: 25px 25px 
+	border-radius: $border-radius 
+	font-size: 21px 
+	cursor: pointer
+	// font-style: italic
+	&:hover
+		background: lighten($bcolor,10%) 
+
+
+
+// Tabulka aktuálně **************
+.table
+	width: 100%
+	margin-bottom: $gap
+	.trow
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		border-bottom: 1px dashed
+
+		.tname
+			min-width: 25%
+		.tdate
+			width: 120px
+			text-align: right
+		.thour
+			width: 200px
+			padding: 0 $gap/2
+
+		.tplace
+			margin-left: auto
+			text-align: right
+// .table
+// 	&:nth-child(1)
+// 		padding-top: $gap*2
+		
+
+// Formulář ****************
+form 
+	font-family: Arial 
+	text-align: left
+input[type=text], input[type=submit] 
+	width: 20% 
+	padding: 12px 
+	margin: 8px 0 
+	display: inline-block 
+	border: 2px solid $bcolor
+	border-radius: 20px
+	box-sizing: border-box 
+input[type=checkbox] 
+	margin-top: 16px 
+input[type=submit] 
+	color: white 
+	border: none 
+input[type=submit]:hover 
+	opacity: 0.8 
+
+
+.pb-gap
+	padding-bottom: $gap
+
+
+
+
+a
+	@extend .linkh
+	&:hover
+		font-style: normal
+		text-decoration: underline
+
+.linkh
+	text-decoration: none
+	color: $bcolor
+	&:hover
+		color: lighten($bcolor,5%)
+		font-style: italic
+
+svg
+	fill: #2B1143
+	path
+		fill: #2B1143
+	rect
+		fill: #fbfbf1
+
+h1,h2,h3,h4
+	text-transform: uppercase
+
+h1
+	font-size: 10vw
+	line-height: .8
+	margin: 0
+h5
+	margin: 0
+
+
+ul
+	li
+		list-style: none
+
+
+.w-75
+	max-width: 75%
+.mx-auto
+	margin-left: auto
+	margin-right: auto
+.ml-auto
+	margin-left: auto
+
+.underline
+	text-decoration: underline
+
+
+.headergap
+	padding-top: $gap*2
+.headergap2
+	padding-top: $gap*4
+
+.py-gap
+	padding-top: $gap
+	padding-bottom: $gap
+.pt-gap
+	padding-top: $gap
+	
+.mb-gap
+	margin-bottom: $gap
+.text-right
+	text-align: right
+
+.d-inline
+	display: inline-block
+.d-flex
+	display: flex
+
+.small
+	font-weight: 200
+	font-size: 14px
+
+.pointer
+	position: absolute
+	height: auto
+	top: 100px
+	width: 140px
+	left: 50%
+	pointer-events: none
+	// border: 1px solid red
+	display: none
+
+.pointer img 
+	width: 50vw
+    
+
+.img-fluid
+	width: 100%
+	height: auto
+	aspect-ratio: attr(width) / attr(height)
+	z-index: -1
+	position: relative
+.headerimg
+	width: 70%
+
+
+.bg-color
+	background-color: $bgcolor
+
+.zrnko
+	width: $gap
+	height: $gap
+	margin: $gap $gap/2 0 0
+	transform: rotate(20deg)
+	&:nth-child(2)
+		transform: rotate(45deg)
+	&:nth-child(3)
+		transform: rotate(99deg)
+	&:hover
+		transform: rotate(-40deg)
+
+
+.mt-0
+	margin-top: 0
