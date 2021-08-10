@@ -29,7 +29,7 @@
 
 	<script
 	  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
+	<!-- <script src="https://kit.fontawesome.com/220dfbe107.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
 	<div class="wrap">
@@ -64,8 +64,14 @@
 			<h1>Souhra</h1>
 		</div>
 
+
+
+
+
+
+
 		<div class="info">
-			<button id="open-button" class="open-button">Aktuálně</button>
+			<button id="open-button" class="open-button">Program</button>
 		</div>
 		<div class="lang"><h5>EN</h5></div>
 
@@ -81,14 +87,18 @@
 			<form action="../">
 			<select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
 			    <option value="">Všechno</option>
-			    <option value="categories.html">Taneční představení</option>
-			    <option value="http://www.google.com/">Participativní projekty</option>
-			    <option value="http://www.altavista.com/">Účasti</option>
-			    <option value="http://www.amazon.com/">Již brzy</option>
+			    <option value="categories.html">V divadle</option>
+			    <option value="http://www.google.com/">Venku</option>
+			    <option value="http://www.altavista.com/">On-line</option>
+			    <option value="http://www.amazon.com/">Pro školy</option>
+					<option value="http://www.altavista.com/">Přístupnost</option>
+					<option value="http://www.altavista.com/">Připravujeme</option>
+			    <option value="http://www.amazon.com/">5+, 12+, 99+</option>
 			    <option value="">-----------</option>
 			    <option value="">O nás</option>
+<!-- 
 			    <option value="">My k vám</option>
-			    <option value="">Vy k nám</option>
+			    <option value="">Vy k nám</option> -->
 			</select>
 			</form>
 		</div>
@@ -102,59 +112,80 @@
 
 
 
-<div class="modal-overlay closed" id="modal-overlay"></div>
+<div class="modal-overlay " id="modal-overlay"></div>
 
-<div class="modal closed" id="modal">
+<div class="modal " id="modal">
   <button class="close-button" id="close-button"><h2>X</h2></button>
-  <div class="modal-guts">
-<!--   	<form action="/action_page.php" class="pb-gap">
-		  <div class="container">
-		    <h2>Přihlaste se k odběru<br>našeho zpravodaje</h2>
-		  </div>
+  <div class="modal-guts " id="modal-guts">
+  	<div class="text-center">
+	  	<h2 class="">Program</h2>
+		</div>
 
-		  <div class="container">
-		    <input type="text" placeholder="Jméno" name="name" required>
-		    <input type="text" placeholder="E-mail" name="mail" required>
-			  <input class="open-button" type="submit" value="Přihlásit se">
-		  </div>
-		  <div class="container">
-		  	<p class="w-75 small">*Novinky od nás chodí asi tak jednou měsíčně. Garantujeme nula spamu. Nikomu dalšímu vaší adresu neřekneme.</p>
-		  </div>
-
-		</form> -->
 		<div class="table">
 			<div class="trow">
 				<div class="zrnko mt-0 d-inline">
 				<a href="#">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.68 79.04"><g id="Vrstva_4" data-name="Vrstva 4"><path d="M87.66,50c.68,28.18-19,28.3-43.15,28.87S.69,80.27,0,52.09,18.42.6,42.62,0,86.67,8.42,87.66,50Z" /></g></svg>
 				</a>
-				</div><h2 class="d-inline">Vy k nám</h2>
+				</div><h2 class="d-inline">Uvnitř</h2>
 			</div>
 
 			<div class="trow">
-				<div class="tname"><a href="page.html">Tanec a fyzika</a></div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace">PONEC - divadlo pro tanec, Praha</div>
+				<div class="tname"><a href="page.html">Tanec a fyzika</a></div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace"><a href="https://divadloponec.cz">PONEC - divadlo pro tanec</a></div><div class="tcity">Praha</div><div class="tkup"><a href="https://goout.net" target="blank">Vstupenky</a></div>
 			</div>
 			<div class="trow">
-				<div class="tname">Tanec a fyzika</div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace">PONEC - divadlo pro tanec, Praha</div>
+				<div class="tname"><a href="page.html">Tanec a fyzika</a></div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace"><a href="https://divadloponec.cz">Hahadivadlo</a></div><div class="tcity">Ostrava</div><div class="tkup"><a href="https://goout.net"  target="blank">Vstupenky</a></div>
 			</div>
+			
 			<div class="trow">
-				<div class="tname">Karneval zvířat</div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace">Alta, Praha</div>
+				<div class="tname"><a href="page.html">Tanec a fyzika</a></div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace"><a href="https://divadloponec.cz">Hahadivadlo</a></div><div class="tcity">Ostrava</div><div class="tkup"><a href="https://goout.net"  target="blank">Vstupenky</a></div>
 			</div>
+			
 			<div class="trow">
-				<div class="tname">Karneval zvířat</div><div class="tdate">23. ledna</div><div class="tplace">divadlo Mořisko, Ostrava</div>
+				<div class="tname"><a href="page.html">Tanec a fyzika</a></div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace"><a href="https://divadloponec.cz">Hahadivadlo</a></div><div class="tcity">Ostrava</div><div class="tkup"><a href="https://goout.net"  target="blank">Vstupenky</a></div>
 			</div>
-			<div class="trow">
-				<div class="tname">Different?</div><div class="tdate">29. ledna</div><div class="tplace">divadlo Mořisko, ZOOM link</div>
-			</div>
+			
+
 		
 		</div>
+
+
 		<div class="table">
 			<div class="trow">
 				<div class="zrnko mt-0 d-inline">
 				<a href="#">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.68 79.04"><g id="Vrstva_4" data-name="Vrstva 4"><path d="M87.66,50c.68,28.18-19,28.3-43.15,28.87S.69,80.27,0,52.09,18.42.6,42.62,0,86.67,8.42,87.66,50Z" /></g></svg>
 				</a>
-				</div><h2 class="d-inline">My k vám</h2>
+				</div><h2 class="d-inline">Venku</h2>
+			</div>
+
+			<div class="trow">
+				<div class="tname"><a href="page.html">Tanec a fyzika</a></div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace"><a href="https://divadloponec.cz">ZUŠ Komunardů, Praha</a></div><div class="tcity">Praha</div><div class="tkup"><a href="https://goout.net" target="blank">Vstupenky</a></div>
+			</div>
+			<div class="trow">
+				<div class="tname"><a href="page.html">Tanec a fyzika</a></div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace"><a href="https://divadloponec.cz">mateřská škola Kvítek</a></div><div class="tcity">Ostrava</div><div class="tkup"><a href="https://goout.net"  target="blank">Vstupenky</a></div>
+			</div>
+			
+			<div class="trow">
+				<div class="tname"><a href="page.html">Tanec a fyzika</a></div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace"><a href="https://divadloponec.cz">Hahadivadlo</a></div><div class="tcity">Ostrava</div><div class="tkup"><a href="https://goout.net"  target="blank">Vstupenky</a></div>
+			</div>
+			
+			<div class="trow">
+				<div class="tname"><a href="page.html">Tanec a fyzika</a></div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace"><a href="https://divadloponec.cz">Hahadivadlo</a></div><div class="tcity">Ostrava</div><div class="tkup"><a href="https://goout.net"  target="blank">Vstupenky</a></div>
+			</div>
+
+		
+
+		</div>
+
+
+		<div class="table">
+			<div class="trow">
+				<div class="zrnko mt-0 d-inline">
+				<a href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.68 79.04"><g id="Vrstva_4" data-name="Vrstva 4"><path d="M87.66,50c.68,28.18-19,28.3-43.15,28.87S.69,80.27,0,52.09,18.42.6,42.62,0,86.67,8.42,87.66,50Z" /></g></svg>
+				</a>
+				</div><h2 class="d-inline">On-line</h2>
 			</div>
 
 			<div class="trow">
@@ -166,29 +197,30 @@
 			<div class="trow">
 				<div class="tname">Different?</div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace">PONEC - divadlo pro tanec, Praha</div>
 			</div>
-		
 		</div>
-		<div class="table">
-			<div class="trow">
-				<div class="zrnko mt-0 d-inline">
-				<a href="#">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.68 79.04"><g id="Vrstva_4" data-name="Vrstva 4"><path d="M87.66,50c.68,28.18-19,28.3-43.15,28.87S.69,80.27,0,52.09,18.42.6,42.62,0,86.67,8.42,87.66,50Z" /></g></svg>
-				</a>
-				</div><h2 class="d-inline">Festivaly</h2>
-			</div>
 
-			<div class="trow">
-				<div class="tname"><a href="page.html">Tanec a fyzika</a></div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace">ZUŠ Komunardů, Praha</div>
-			</div>
-			<div class="trow">
-				<div class="tname">Tanec a fyzika</div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace">mateřská škola Kvítek, Praha</div>
-			</div>
-			<div class="trow">
-				<div class="tname">Different?</div><div class="tdate">17. ledna</div><div class="thour">9:00 | 11:00</div><div class="tplace">PONEC - divadlo pro tanec, Praha</div>
-			</div>
-		
-		</div>
-		
+
+
+
+
+
+
+		  	<form action="/action_page.php" class="pb-gap">
+				  <div class="container">
+				    <h2>Přihlaste se k odběru<br>našeho zpravodaje</h2>
+				  </div>
+
+				  <div class="container">
+				    <input type="text" placeholder="Jméno" name="name" required>
+				    <input type="text" placeholder="E-mail" name="mail" required>
+					  <input class="open-button" type="submit" value="Přihlásit se">
+				  </div>
+				  <div class="container">
+				  	<p class="w-75 small">*Novinky od nás chodí asi tak jednou měsíčně. Garantujeme nula spamu. Nikomu dalšímu vaší adresu neřekneme.</p>
+				  </div>
+
+				</form>
+
    </div>
   </div>
 
@@ -253,8 +285,14 @@ var modal = document.querySelector("#modal");
 var modalOverlay = document.querySelector("#modal-overlay");
 var closeButton = document.querySelector("#close-button");
 var openButton = document.querySelector("#open-button");
+var modalGuts = document.querySelector("#modal-guts");
 
 closeButton.addEventListener("click", function() {
+  modal.classList.toggle("closed");
+  modalOverlay.classList.toggle("closed");
+});
+
+modalOverlay.addEventListener("click", function() {
   modal.classList.toggle("closed");
   modalOverlay.classList.toggle("closed");
 });

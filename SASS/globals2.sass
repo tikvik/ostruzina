@@ -1,49 +1,4 @@
-// MOdal*************
 
-.modal 
-	display: block 
-	width: 1200px 
-	max-width: 80% 
-	height: 800px 
-	max-height: 100% 
-	position: fixed 
-	z-index: 100 
-	left: 50% 
-	top: 50% 
-	transform: translate(-50%, -50%) 
-	background: white 
-	// box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9) 
-	.close-button 
-		position: absolute 
-		z-index: 1 
-		top: 10px 
-		right: 20px 
-		border: 0 
-		border-radius: $border-radius
-		background: white 
-		// color: white 
-		padding: 5px 10px 
-		font-size: 1.3rem
-		cursor: pointer
-.closed 
-	display: none
-
-.modal-overlay 
-	position: fixed 
-	top: 0 
-	left: 0 
-	width: 100% 
-	height: 100% 
-	z-index: 50 
-	background: rgba(0, 0, 0, 0.6) 
-.modal-guts 
-	position: absolute 
-	top: 0 
-	left: 0 
-	width: 100% 
-	height: 100% 
-	overflow: auto 
-	padding: $gap
 * 
 	box-sizing: border-box 
 	margin: 0 
@@ -56,66 +11,6 @@ li, p
 h1 
 	margin: 0 0 20px 0 
 
-.open-button 
-	border: 0 
-	background: $bcolor 
-	color: white 
-	padding: 25px 25px 
-	border-radius: $border-radius 
-	font-size: 21px 
-	cursor: pointer
-	// font-style: italic
-	&:hover
-		background: lighten($bcolor,10%) 
-
-
-
-// Tabulka aktuálně **************
-.table
-	width: 100%
-	margin-bottom: $gap
-	.trow
-		display: flex
-		flex-wrap: wrap
-		width: 100%
-		border-bottom: 1px dashed
-
-		.tname
-			min-width: 25%
-		.tdate
-			width: 120px
-			text-align: right
-		.thour
-			width: 200px
-			padding: 0 $gap/2
-
-		.tplace
-			margin-left: auto
-			text-align: right
-// .table
-// 	&:nth-child(1)
-// 		padding-top: $gap*2
-		
-
-// Formulář ****************
-form 
-	font-family: Arial 
-	text-align: left
-input[type=text], input[type=submit] 
-	width: 20% 
-	padding: 12px 
-	margin: 8px 0 
-	display: inline-block 
-	border: 2px solid $bcolor
-	border-radius: 20px
-	box-sizing: border-box 
-input[type=checkbox] 
-	margin-top: 16px 
-input[type=submit] 
-	color: white 
-	border: none 
-input[type=submit]:hover 
-	opacity: 0.8 
 
 
 .pb-gap
@@ -124,11 +19,12 @@ input[type=submit]:hover
 
 
 
+
 a
 	text-decoration: none
-	color: $bcolor
+	color: $pcolor
 	&:hover
-		color: lighten($bcolor,5%)
+		// color: lighten($pcolor,5%)
 		font-style: italic
 
 svg
@@ -145,6 +41,9 @@ h1
 	font-size: 10vw
 	line-height: .8
 	margin: 0
+
+
+
 h5
 	margin: 0
 
@@ -191,6 +90,9 @@ ul
 	font-weight: 200
 	font-size: 14px
 
+.text-center
+	text-align: center
+
 .pointer
 	position: absolute
 	height: auto
@@ -221,7 +123,7 @@ ul
 .zrnko
 	width: $gap
 	height: $gap
-	margin: $gap $gap/2 0 0
+	margin: $gap $gap/4 0 0
 	transform: rotate(20deg)
 	&:nth-child(2)
 		transform: rotate(45deg)
