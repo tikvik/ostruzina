@@ -126,8 +126,7 @@ body
 			text-transform: uppercase
 
 			&:nth-child(1)
-				padding-top: $gap*3.5
-
+				padding-top: $gap*5
 				@include for-size(sm)
 					padding-top: $gap*4
 				cursor: url(images/logo.svg), auto
@@ -135,6 +134,9 @@ body
 				cursor: url(images/logo.svg), auto
 			&:nth-child(3)
 				cursor: url(images/logo.svg), auto
+			&:last-child
+				cursor: url(images/logo.svg), auto
+				padding-bottom: $gap*4
 		// background-color: blue
 
 	.pageheader

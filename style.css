@@ -464,7 +464,7 @@ body {
   text-transform: uppercase;
 }
 .wrap .content h1:nth-child(1) {
-  padding-top: 10.5rem;
+  padding-top: 15rem;
   cursor: url(images/logo.svg), auto;
 }
 @media (min-width: 600px) {
@@ -477,6 +477,10 @@ body {
 }
 .wrap .content h1:nth-child(3) {
   cursor: url(images/logo.svg), auto;
+}
+.wrap .content h1:last-child {
+  cursor: url(images/logo.svg), auto;
+  padding-bottom: 12rem;
 }
 .wrap .pageheader {
   grid-column: 3/5;
