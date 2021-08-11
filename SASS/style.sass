@@ -55,9 +55,8 @@ body
 .wrap
 	display: grid
 	grid-template-columns: 100%
-	grid-template-rows: $gap/2 auto auto 1fr auto
+	grid-template-rows: $gap/2 auto auto 1fr 120px
 	grid-template-areas: "topleft" "topleft" "topright" "content" "topcenter" "bottomright" 
-	padding: $gap/2 $gap/2 0 $gap/2
 	@include for-size(sm)
 		grid-template-areas: ". . info . ." ". topleft topcenter topright ." ". leftsidebar content . ." ". bottomleft bottomcenter bottomright ."
 		grid-template-rows: $gap/2 150px 1fr 50px
@@ -88,13 +87,14 @@ body
 		grid-area: topright
 		justify-self: center
 		background-color: $bgcolor
+		padding-bottom: $gap/3
+		width: 90%
+		z-index: 1
 		@include for-size(sm)
 			background-color: transparent
-		width: 90%
-		@include for-size(sm)
-			justify-self: start
+			justify-self: end
 			width: auto
-		z-index: 1
+
 	.cancelfilter
 		grid-area: bottomleft
 

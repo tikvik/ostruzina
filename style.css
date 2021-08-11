@@ -380,9 +380,8 @@ body {
 .wrap {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 1.5rem auto auto 1fr auto;
+  grid-template-rows: 1.5rem auto auto 1fr 120px;
   grid-template-areas: "topleft" "topleft" "topright" "content" "topcenter" "bottomright";
-  padding: 1.5rem 1.5rem 0 1.5rem;
   grid-gap: 0px;
   height: 100vh;
 }
@@ -419,17 +418,14 @@ body {
   grid-area: topright;
   justify-self: center;
   background-color: #F9F8E7;
+  padding-bottom: 1rem;
   width: 90%;
   z-index: 1;
 }
 @media (min-width: 600px) {
   .wrap .filtr {
     background-color: transparent;
-  }
-}
-@media (min-width: 600px) {
-  .wrap .filtr {
-    justify-self: start;
+    justify-self: end;
     width: auto;
   }
 }
