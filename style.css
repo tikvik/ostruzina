@@ -351,6 +351,12 @@ input[type=submit]:hover {
 }
 @font-face {
   font-family: "Anivers_Bold";
+  src: url("https://tikvik.github.io/ostruzina/FONTS/Anivers_Bold.otf");
+  unicode-range: U+0000-07FF;
+  font-display: block;
+}
+@font-face {
+  font-family: "Anivers_Bold";
   src: url("fonts/Anivers_Bold.otf");
   unicode-range: U+0000-07FF;
   font-display: block;
