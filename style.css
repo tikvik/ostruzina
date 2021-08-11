@@ -363,7 +363,6 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 body {
@@ -378,8 +377,7 @@ body {
 }
 
 .wrap {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 1.5rem auto auto 1fr 120px;
   grid-template-areas: "topleft" "topleft" "topright" "content" "topcenter" "bottomright";
@@ -440,7 +438,6 @@ body {
 .wrap .content {
   grid-column: 1/6;
   grid-row: 1/6;
-  overflow: auto;
   text-align: center;
   padding-bottom: 7rem;
 }

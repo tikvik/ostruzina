@@ -36,7 +36,7 @@ html
 	height: 100%
 	margin: 0
 	padding: 0
-	overflow: hidden
+	// overflow: hidden
 body
 	min-height: 100%
 	margin: 0
@@ -53,8 +53,7 @@ body
 
 
 .wrap
-	display: flex
-	flex-direction: column
+	display: grid
 	grid-template-columns: 100%
 	grid-template-rows: $gap/2 auto auto 1fr 120px
 	grid-template-areas: "topleft" "topleft" "topright" "content" "topcenter" "bottomright" 
@@ -107,7 +106,7 @@ body
 	.content
 		grid-column: 1/6
 		grid-row: 1/6
-		overflow: auto
+		// overflow: auto
 		text-align: center
 		padding-bottom: 7rem
 
