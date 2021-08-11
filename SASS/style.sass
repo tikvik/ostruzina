@@ -36,7 +36,9 @@ html
 	height: 100%
 	margin: 0
 	padding: 0
-	// overflow: hidden
+	overflow: auto
+	@include for-size(sm)
+		overflow: hidden
 body
 	min-height: 100%
 	margin: 0
@@ -80,7 +82,10 @@ body
 	.info
 		grid-area: topcenter
 		text-align: center
-		position: relative
+		position: fixed
+		bottom: 0
+		left: 50%
+		transform: translate(-50%, -50%) 
 		font-size: 28px
 		text-transform: uppercase
 	.filtr
@@ -106,7 +111,9 @@ body
 	.content
 		grid-column: 1/6
 		grid-row: 1/6
-		// overflow: auto
+		overflow: none
+		@include for-size(sm)
+			overflow: auto
 		text-align: center
 		padding-bottom: 7rem
 

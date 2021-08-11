@@ -363,6 +363,12 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: auto;
+}
+@media (min-width: 600px) {
+  html {
+    overflow: hidden;
+  }
 }
 
 body {
@@ -409,7 +415,10 @@ body {
 .wrap .info {
   grid-area: topcenter;
   text-align: center;
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 28px;
   text-transform: uppercase;
 }
@@ -438,8 +447,14 @@ body {
 .wrap .content {
   grid-column: 1/6;
   grid-row: 1/6;
+  overflow: none;
   text-align: center;
   padding-bottom: 7rem;
+}
+@media (min-width: 600px) {
+  .wrap .content {
+    overflow: auto;
+  }
 }
 .wrap .content h1 {
   font-size: 15vw;
