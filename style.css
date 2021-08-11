@@ -402,10 +402,12 @@ body {
   grid-area: topleft;
   position: relative;
   background-color: #F9F8E7;
+  margin: 1.5rem;
 }
 @media (min-width: 600px) {
   .wrap .logo {
     background-color: transparent;
+    margin: 0;
   }
 }
 .wrap .logo img {
