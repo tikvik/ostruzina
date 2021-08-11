@@ -6,27 +6,50 @@
 		display: flex
 		flex-wrap: wrap
 		width: 100%
-		height: $gap
+		min-height: $gap
 		border-bottom: 1px dashed $pcolor
-		align-items: center
+		align-items: start
+		font-size: $table_font_size
+		padding-top: $gap/4
+		padding-bottom: $gap/4 !important
+		@include for-size(sm)
+			font-size: 20px
+
 		.tname
-			min-width: 25%
-		.tdate
-			width: 10%
-			text-align: right
-		.thour
-			width: 16%
-			padding-left: $gap/2
+			margin-right: $gap/4
+			flex-grow: 1
+			width: 10rem
+			font-family: Anivers_Bold
+		.tdate_thour
+			width: 15rem
+			display: flex
+			flex-wrap: wrap
+
+			.tdate
+				text-align: center
+
+			.thour
+				padding-left: $gap/4
 		
-		.tplace
-			text-align: left
-			width: 25%
-			padding-left: $gap/2
-		.tcity
-			text-align: left
-			width: 13%
-			padding-left: $gap/2
+		.tplace_tcity
+			display: flex
+			flex-wrap: wrap
+			flex-grow: 1
+			width: 20rem
+			.tplace
+				margin-right: auto		
+			.tcity
+				margin-left: auto !important
+
+		
 		.tkup
-			width: 10%
+			min-width: 8%
 			text-align: right
 			margin-left: auto
+			padding-left: $gap/4
+			font-family: Anivers_Bold
+
+	// .trow > div
+	// 	border: .1px solid red
+	// .trow > div > div
+	// 	border: .1px solid green

@@ -5,6 +5,7 @@ $bgcolor: #F9F8E7
 $plighter: lighten($pcolor,8%)
 $border: $gap/20
 $border-radius: 20px
+$table_font_size: 12pt
 
 @keyframes example
 	0%
@@ -22,6 +23,7 @@ $border-radius: 20px
 
 @include font('Anivers_Regular', 'https://tikvik.github.io/ostruzina/FONTS/', '.otf')
 @include font('Anivers_Regular', 'fonts/', '.otf')
+@include font('Anivers_Bold', 'fonts/', '.otf')
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap')
 
@@ -39,7 +41,6 @@ body
 	min-height: 100%
 	margin: 0
 	padding: 0
-	font-family: "Roboto", sans-serif
 	font-size: 2vw
 	font-weight: 800
 	color: $pcolor
@@ -53,16 +54,27 @@ body
 
 .wrap
 	display: grid
-	grid-template-columns: $gap 250px auto 250px $gap
-	grid-template-rows: $gap/2 150px 1fr 50px
-	grid-template-areas: ". . info . ." ". topleft topcenter topright ." ". leftsidebar content . ." ". bottomleft bottomcenter bottomright ."
+	grid-template-columns: 100%
+	grid-template-rows: $gap/2 auto auto 1fr auto
+	grid-template-areas: "topleft" "topleft" "topright" "content" "topcenter" "bottomright" 
+	padding: $gap/2 $gap/2 0 $gap/2
+	@include for-size(sm)
+		grid-template-areas: ". . info . ." ". topleft topcenter topright ." ". leftsidebar content . ." ". bottomleft bottomcenter bottomright ."
+		grid-template-rows: $gap/2 150px 1fr 50px
+		grid-template-columns: $gap 250px auto 250px $gap
+		padding: 0
+
 	grid-gap: 0px
 	height: 100vh
+	
 
 
 	.logo
 		grid-area: topleft	
 		position: relative
+		background-color: $bgcolor
+		@include for-size(sm)
+			background-color: transparent
 		img
 			width: 100%
 			height: auto
@@ -74,7 +86,14 @@ body
 		text-transform: uppercase
 	.filtr
 		grid-area: topright
-		justify-self: start
+		justify-self: center
+		background-color: $bgcolor
+		@include for-size(sm)
+			background-color: transparent
+		width: 90%
+		@include for-size(sm)
+			justify-self: start
+			width: auto
 		z-index: 1
 	.cancelfilter
 		grid-area: bottomleft
@@ -89,6 +108,7 @@ body
 		grid-row: 1/6
 		overflow: auto
 		text-align: center
+		padding-bottom: 7rem
 
 
 		h1
@@ -99,7 +119,10 @@ body
 			text-transform: uppercase
 
 			&:nth-child(1)
-				padding-top: $gap*4
+				padding-top: $gap*3.5
+
+				@include for-size(sm)
+					padding-top: $gap*4
 				cursor: url(images/logo.svg), auto
 			&:nth-child(2)
 				cursor: url(images/logo.svg), auto
@@ -136,11 +159,24 @@ body
 		position: relative
 		align-self: end
 
-.trow
-	font-size: 20px !important
 
 
 
+.zrnko
+	width: $gap/2
+	height: $gap/2
+	@include for-size(sm)
+		width: $gap/1.4
+		height: $gap/1.4
+
+
+	transform: rotate(20deg)
+	&:nth-child(2)
+		transform: rotate(45deg)
+	&:nth-child(3)
+		transform: rotate(99deg)
+	&:hover
+		transform: rotate(-40deg)
 
 
 // .table
