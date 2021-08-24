@@ -371,11 +371,6 @@ html {
   padding: 0;
   overflow: auto;
 }
-@media (min-width: 600px) {
-  html {
-    overflow: hidden;
-  }
-}
 
 body {
   min-height: 100%;
