@@ -52,6 +52,9 @@ ul
 	li
 		list-style: none
 
+b
+	font-family: Anivers_Bold
+
 
 .w-75
 	max-width: 75%
@@ -74,6 +77,12 @@ ul
 	padding-top: $gap
 	padding-bottom: $gap
 .pt-gap
+	padding-top: $gap
+.pt-gap-s
+	padding-top: $gap/2
+.p-gap
+	margin: $gap/4
+.mt-gap
 	padding-top: $gap
 	
 .mb-gap
@@ -114,7 +123,9 @@ ul
 	z-index: -1
 	position: relative
 .headerimg
-	width: 70%
+	width: 100%
+	@include for-size(sm)
+		width: 70%
 
 
 .bg-color

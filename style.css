@@ -65,6 +65,10 @@ ul li {
   list-style: none;
 }
 
+b {
+  font-family: Anivers_Bold;
+}
+
 .w-75 {
   max-width: 75%;
 }
@@ -96,6 +100,18 @@ ul li {
 }
 
 .pt-gap {
+  padding-top: 3rem;
+}
+
+.pt-gap-s {
+  padding-top: 1.5rem;
+}
+
+.p-gap {
+  margin: 0.75rem;
+}
+
+.mt-gap {
   padding-top: 3rem;
 }
 
@@ -147,7 +163,12 @@ ul li {
 }
 
 .headerimg {
-  width: 70%;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .headerimg {
+    width: 70%;
+  }
 }
 
 .bg-color {
@@ -196,7 +217,6 @@ ul li {
   margin-right: 0.75rem;
   flex-grow: 1;
   width: 10rem;
-  font-family: Anivers_Bold;
 }
 .table .trow .tdate_thour {
   width: 15rem;
@@ -227,6 +247,22 @@ ul li {
   margin-left: auto;
   padding-left: 0.75rem;
   font-family: Anivers_Bold;
+}
+
+.detail .table {
+  padding: 2rem 2rem;
+  position: relative;
+  background-color: #F9F8E7;
+  z-index: 5000;
+  margin-bottom: 0;
+}
+@media (min-width: 600px) {
+  .detail .table {
+    background-color: transparent;
+  }
+}
+.detail .table .trow {
+  border-top: 1px dashed #290F42;
 }
 
 .open-button {
@@ -371,22 +407,32 @@ html {
   padding: 0;
   overflow: auto;
 }
+@media (min-width: 600px) {
+  html {
+    overflow-x: hidden;
+  }
+}
 
 body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  font-size: 2vw;
+  font-size: 12pt;
   font-weight: 800;
   color: #290F42;
   background-color: #F9F8E7;
   font-family: Anivers_Regular;
 }
+@media (min-width: 600px) {
+  body {
+    font-size: 2vw;
+  }
+}
 
 .wrap {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 1.5rem auto auto 1fr 120px;
+  grid-template-rows: 1.5rem auto 80px 1fr 120px;
   grid-template-areas: "topleft" "topleft" "topright" "content" "topcenter" "bottomright";
   grid-gap: 0px;
   height: 100vh;
@@ -446,17 +492,21 @@ body {
 .wrap .lang {
   grid-area: bottomright;
   text-align: right;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
 }
 .wrap .content {
-  grid-column: 1/6;
-  grid-row: 1/6;
+  grid-area: content;
   overflow: none;
+  padding-top: 1.5rem;
   text-align: center;
-  padding-bottom: 7rem;
 }
 @media (min-width: 600px) {
   .wrap .content {
     overflow: auto;
+    grid-column: 1/6;
+    grid-row: 1/6;
   }
 }
 .wrap .content h1 {
@@ -467,13 +517,7 @@ body {
   text-transform: uppercase;
 }
 .wrap .content h1:nth-child(1) {
-  padding-top: 15rem;
   cursor: url(images/logo.svg), auto;
-}
-@media (min-width: 600px) {
-  .wrap .content h1:nth-child(1) {
-    padding-top: 12rem;
-  }
 }
 .wrap .content h1:nth-child(2) {
   cursor: url(images/logo.svg), auto;
@@ -486,28 +530,55 @@ body {
   padding-bottom: 12rem;
 }
 .wrap .pageheader {
-  grid-column: 3/5;
-  grid-row: 2/3;
-  text-align: right;
+  grid-area: topright;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: left;
+  padding-left: 3.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 600px) {
+  .wrap .pageheader {
+    grid-column: 3/5;
+    grid-row: 2/3;
+    text-align: right;
+    display: block;
+  }
 }
 .wrap .pagecontent {
-  grid-column: 3/5;
-  grid-row: 2/5;
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+@media (min-width: 600px) {
+  .wrap .pagecontent {
+    grid-column: 3/5;
+    grid-row: 3/5;
+  }
 }
 .wrap .pagecontent .innercontent {
   width: 90%;
-  border-left: 2px solid #290F42;
   margin-left: auto;
-  padding-left: 3rem;
+  padding-left: 1.5rem;
   padding-right: 3rem;
-  padding-bottom: 3rem;
+}
+@media (min-width: 600px) {
+  .wrap .pagecontent .innercontent {
+    padding-left: 3rem;
+    border-left: 2px solid #290F42;
+  }
 }
 .wrap .pagecontent .innercontent a {
   text-decoration: underline;
 }
+.wrap .pagecontent .innercontent ul {
+  margin-left: 0;
+}
 .wrap .pageleftsidebar {
   grid-area: leftsidebar;
-  position: relative;
+  position: fixed;
+  bottom: 0.75rem;
+  left: 0;
   align-self: end;
 }
 
@@ -525,8 +596,10 @@ body {
 .zrnko:nth-child(2) {
   transform: rotate(45deg);
 }
-.zrnko:nth-child(3) {
+.zrnko:last-child {
   transform: rotate(99deg);
+  width: 2rem;
+  height: 2rem;
 }
 .zrnko:hover {
   transform: rotate(-40deg);

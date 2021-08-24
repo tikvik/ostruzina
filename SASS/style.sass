@@ -38,13 +38,15 @@ html
 	margin: 0
 	padding: 0
 	overflow: auto
-	// @include for-size(sm)
-	// 	overflow: hidden
+	@include for-size(sm)
+		overflow-x: hidden
 body
 	min-height: 100%
 	margin: 0
 	padding: 0
-	font-size: 2vw
+	font-size: 12pt
+	@include for-size(sm)
+		font-size: 2vw
 	font-weight: 800
 	color: $pcolor
 	background-color: $bgcolor
@@ -58,7 +60,7 @@ body
 .wrap
 	display: grid
 	grid-template-columns: 100%
-	grid-template-rows: $gap/2 auto auto 1fr 120px
+	grid-template-rows: $gap/2 auto 80px 1fr 120px
 	grid-template-areas: "topleft" "topleft" "topright" "content" "topcenter" "bottomright" 
 	@include for-size(sm)
 		grid-template-areas: ". . info . ." ". topleft topcenter topright ." ". leftsidebar content . ." ". bottomleft bottomcenter bottomright ."
@@ -110,15 +112,20 @@ body
 	.lang
 		grid-area: bottomright
 		text-align: right
+		position: fixed
+		bottom: $gap/2
+		right: $gap/2
+
 
 	.content
-		grid-column: 1/6
-		grid-row: 1/6
+		grid-area: content
 		overflow: none
+		padding-top: $gap/2
 		@include for-size(sm)
 			overflow: auto
+			grid-column: 1/6
+			grid-row: 1/6
 		text-align: center
-		padding-bottom: 7rem
 
 
 		h1
@@ -129,9 +136,6 @@ body
 			text-transform: uppercase
 
 			&:nth-child(1)
-				padding-top: $gap*5
-				@include for-size(sm)
-					padding-top: $gap*4
 				cursor: url(images/logo.svg), auto
 			&:nth-child(2)
 				cursor: url(images/logo.svg), auto
@@ -143,33 +147,56 @@ body
 		// background-color: blue
 
 	.pageheader
-		grid-column: 3/5
-		grid-row: 2/3
-		text-align: right
+		grid-area: topright
+		display: flex
+		justify-content: start
+		align-items: center
+		text-align: left
+		padding-left: 3.5rem
+		padding-bottom: .5rem
+		@include for-size(sm)
+			grid-column: 3/5
+			grid-row: 2/3
+			text-align: right
+			display: block
+
+
 
 
 
 	.pagecontent
-		grid-column: 3/5
-		grid-row: 2/5
+		grid-column: 1/2
+		grid-row: 4/5
+		@include for-size(sm)
+			grid-column: 3/5
+			grid-row: 3/5
+		
+
 		// overflow: auto
 		.innercontent
 			width: 90%
-			border-left: 2px solid $pcolor
 			margin-left: auto
-			padding-left: $gap
+			padding-left: $gap/2
+			@include for-size(sm)
+				padding-left: $gap
+				border-left: 2px solid $pcolor
+
 			padding-right: $gap
-			padding-bottom: $gap
+			// padding-bottom: $gap
 			a
 				// font-style: italic
 				text-decoration: underline
-
+			ul
+				margin-left: 0
 
 
 	.pageleftsidebar
 		grid-area: leftsidebar
-		position: relative
+		position: fixed
+		bottom: $gap/4
+		left: 0
 		align-self: end
+		// transform: translate(-50%, -50%) 
 
 
 
@@ -185,11 +212,34 @@ body
 	transform: rotate(20deg)
 	&:nth-child(2)
 		transform: rotate(45deg)
-	&:nth-child(3)
+	&:last-child
 		transform: rotate(99deg)
+		width: $gap/1.5
+		height: $gap/1.5
 	&:hover
 		transform: rotate(-40deg)
 
+
+
+
+
+
+// #pic
+// 	display: none !important
+// 	@include for-size(sm)
+// 		display: block
+// #pic2
+// 	display: none !important
+// 	@include for-size(sm)
+// 		display: block
+// #pic3
+// 	display: none !important
+// 	@include for-size(sm)
+// 		display: block
+// #pic4
+// 	display: none !important
+// 	@include for-size(sm)
+// 		display: block
 
 // .table
 // 	&:nth-child(1)

@@ -19,7 +19,8 @@
 			margin-right: $gap/4
 			flex-grow: 1
 			width: 10rem
-			font-family: Anivers_Bold
+
+
 		.tdate_thour
 			width: 15rem
 			display: flex
@@ -48,7 +49,26 @@
 			margin-left: auto
 			padding-left: $gap/4
 			font-family: Anivers_Bold
+.detail
+	.table
+		padding: 2rem 2rem
+		position: relative
+		background-color: $bgcolor
+		@include for-size(sm)
+			background-color: transparent
+		z-index: 5000
+		margin-bottom: 0
+		.trow
+			border-top: 1px dashed $pcolor
 
+// .detail
+// 	.tname
+// 		order: 1
+// 	.tdate_thour
+// 		order: 2
+// 	.tplace_tcity
+		
+// 	.tkup
 	// .trow > div
 	// 	border: .1px solid red
 	// .trow > div > div
