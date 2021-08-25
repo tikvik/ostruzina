@@ -19,6 +19,7 @@ $table_font_size: 12pt
 @import table
 @import modal
 @import mailchimp
+@import carousel
 
 
 @include font('Anivers_Regular', 'https://tikvik.github.io/ostruzina/FONTS/', '.otf')
@@ -182,6 +183,9 @@ body
 			@include for-size(sm)
 				padding-left: $gap
 				border-left: 2px solid $pcolor
+				padding-bottom: $gap/2
+				margin-top: $gap
+				margin-bottom: $gap/2
 
 			padding-right: $gap
 			// padding-bottom: $gap

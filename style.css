@@ -200,6 +200,7 @@ b {
 .table .trow {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
   min-height: 3rem;
   border-bottom: 1px dashed #290F42;
@@ -219,12 +220,24 @@ b {
   width: 10rem;
 }
 .table .trow .tdate_thour {
-  width: 15rem;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (min-width: 600px) {
+  .table .trow .tdate_thour {
+    width: 15rem;
+  }
 }
 .table .trow .tdate_thour .tdate {
-  text-align: center;
+  text-align: left;
+  width: 7rem;
+}
+@media (min-width: 600px) {
+  .table .trow .tdate_thour .tdate {
+    text-align: right;
+  }
 }
 .table .trow .tdate_thour .thour {
   padding-left: 0.75rem;
@@ -233,10 +246,8 @@ b {
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
+  justify-content: end;
   width: 20rem;
-}
-.table .trow .tplace_tcity .tplace {
-  margin-right: auto;
 }
 .table .trow .tplace_tcity .tcity {
   margin-left: auto !important;
@@ -249,20 +260,29 @@ b {
   font-family: Anivers_Bold;
 }
 
-.detail .table {
-  padding: 2rem 2rem;
+.table > .trow > div {
+  padding: 0 0.2rem;
+}
+
+.post .table {
+  padding-top: 0.375rem;
+  padding-bottom: 3rem;
   position: relative;
   background-color: #F9F8E7;
   z-index: 5000;
   margin-bottom: 0;
 }
 @media (min-width: 600px) {
-  .detail .table {
+  .post .table {
     background-color: transparent;
+    padding-top: 1.5rem;
   }
 }
-.detail .table .trow {
+.post .table .trow {
   border-top: 1px dashed #290F42;
+}
+.post .table .tname {
+  width: 20rem;
 }
 
 .open-button {
@@ -371,6 +391,96 @@ input[type=submit] {
 
 input[type=submit]:hover {
   opacity: 0.8;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.mySlides {
+  display: none;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 @font-face {
@@ -567,6 +677,9 @@ body {
   .wrap .pagecontent .innercontent {
     padding-left: 3rem;
     border-left: 2px solid #290F42;
+    padding-bottom: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
   }
 }
 .wrap .pagecontent .innercontent a {

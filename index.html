@@ -132,7 +132,7 @@
 
   <div class="trow">
     <div class="tname">
-      <a href="page.html">Karneval zvířat</a>
+      <a href="page.html">Karneval zvířat a zvířátek</a>
     </div>
 		<div class="tdate_thour">
 			<div class="tdate">
@@ -341,6 +341,7 @@
 	</div>
 	<script>
 
+
 $(document).ready(function(){
 
 	  $("#zrnko").mousemove(function (e) {
@@ -349,9 +350,7 @@ $(document).ready(function(){
 		$("#zrnko").hover(function (e) {
 			$("#pic").toggle();
 		});
-		$("#zrnko").click(function (e) {
-			$("#pic").toggle();
-		});
+
 
 	  $("#zrnko2").mousemove(function (e) {
 	      $("#pic2").css({ left: e.pageX-200, top: e.pageY -300 });
@@ -397,9 +396,6 @@ openButton.addEventListener("click", function() {
   modal.classList.toggle("closed");
   modalOverlay.classList.toggle("closed");
 });
-
-
-
 
 
 

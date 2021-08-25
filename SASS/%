@@ -30,10 +30,7 @@
 			@include for-size(sm)
 				width: 15rem
 			.tdate
-				text-align: left
-				@include for-size(sm)
-					text-align: right
-				width: 7rem
+				text-align: center
 
 			.thour
 				padding-left: $gap/4
@@ -42,10 +39,10 @@
 			display: flex
 			flex-wrap: wrap
 			flex-grow: 1
-			justify-content: end
+			justify-content: space-between
 			width: 20rem
 			.tplace
-				// margin-right: auto		
+				margin-right: auto		
 			.tcity
 				margin-left: auto !important
 
@@ -57,20 +54,16 @@
 			padding-left: $gap/4
 			font-family: Anivers_Bold
 
-.table>.trow > div
-	padding: 0 .2rem
-
 
 .post
 	.table
-		padding-top: $gap/8 
+		padding-top: $gap/2 !important
 		padding-bottom: $gap
 		position: relative
 		background-color: $bgcolor
 
 		@include for-size(sm)
 			background-color: transparent
-			padding-top: $gap/2 
 		z-index: 5000
 		margin-bottom: 0
 		.trow
