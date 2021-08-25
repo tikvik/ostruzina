@@ -1,6 +1,7 @@
 
 $gap: 3rem
 $pcolor: #290F42
+$dpcolor: darken(#290F42,6)
 $bgcolor: #F9F8E7
 $plighter: lighten($pcolor,8%)
 $border: $gap/20
@@ -227,8 +228,20 @@ body
 
 
 
-
-
+.inverted
+	color: white
+	background-color: $dpcolor
+	line-height: 1.5
+	a
+		color: white
+		text-decoration: none !important
+	path
+		fill: white
+	.innercontent
+		border-left: 2px solid white !important
+	.trow
+		border-top: 1px dashed white !important
+		border-bottom: 1px dashed  white !important
 
 // #pic
 // 	display: none !important

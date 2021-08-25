@@ -1,8 +1,10 @@
 // Formulář ****************
 form 
 	text-align: left
-input[type=text], input[type=submit] 
-	width: 20% 
+input[type=text], input[type=submit]
+	width: 100%
+	@include for-size(md)
+		width: 20%
 	padding: 12px 
 	margin: 8px 0 
 	display: inline-block 

@@ -371,13 +371,18 @@ form {
 }
 
 input[type=text], input[type=submit] {
-  width: 20%;
+  width: 100%;
   padding: 12px;
   margin: 8px 0;
   display: inline-block;
   border: 2px solid #290F42;
   border-radius: 20px;
   box-sizing: border-box;
+}
+@media (min-width: 900px) {
+  input[type=text], input[type=submit] {
+    width: 20%;
+  }
 }
 
 input[type=checkbox] {
@@ -717,6 +722,26 @@ body {
 }
 .zrnko:hover {
   transform: rotate(-40deg);
+}
+
+.inverted {
+  color: white;
+  background-color: #1a0929;
+  line-height: 1.5;
+}
+.inverted a {
+  color: white;
+  text-decoration: none !important;
+}
+.inverted path {
+  fill: white;
+}
+.inverted .innercontent {
+  border-left: 2px solid white !important;
+}
+.inverted .trow {
+  border-top: 1px dashed white !important;
+  border-bottom: 1px dashed white !important;
 }
 
 /*# sourceMappingURL=style.css.map */
