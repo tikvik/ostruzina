@@ -120,11 +120,13 @@ body
 	.content
 		grid-area: content
 		overflow: none
-		padding-top: $gap/2
+		padding-top: $gap/3
+
 		@include for-size(sm)
 			overflow: auto
 			grid-column: 1/6
 			grid-row: 1/6
+			padding-top: $gap*3
 		text-align: center
 
 

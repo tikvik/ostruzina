@@ -499,7 +499,7 @@ body {
 .wrap .content {
   grid-area: content;
   overflow: none;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   text-align: center;
 }
 @media (min-width: 600px) {
@@ -507,6 +507,7 @@ body {
     overflow: auto;
     grid-column: 1/6;
     grid-row: 1/6;
+    padding-top: 9rem;
   }
 }
 .wrap .content h1 {
